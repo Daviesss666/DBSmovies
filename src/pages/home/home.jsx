@@ -12,7 +12,7 @@ const Home = () =>{
     
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=d6c435232ef0e90f009468ec2fb6b1e4&language=en-US`)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
         .then(res => res.json())
         .then(data => setPopularMovies(data.results))
     }, [])
