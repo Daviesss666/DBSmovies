@@ -9,11 +9,8 @@ const MovieList = () => {
     
     useEffect(() => {
         getData()
-    }, [])
+    })
 
-    useEffect(() => {
-        getData()
-    }, [type])
 
     const getData = () => {
         fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
