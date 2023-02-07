@@ -3,12 +3,12 @@ import "./movie.css"
 import { useParams } from "react-router-dom"
 
 const Movie = () => {
-    const [currentMovieDetail, setMovie] = useState()
+    const [currentMovieDetail, setMovie] = useState([])
     const { id } = useParams()
     
     useEffect(() => {
         getData()
-        window.scrollTo(0,0)
+        
     })
 
     const getData = () => {
