@@ -1,0 +1,50 @@
+.header {
+    margin: 0 2.5rem;
+    padding: .5rem 0;
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+}
+
+.header-links{
+    text-decoration: none;
+}
+
+
+.headerLeft, .headerRight {
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+a > span{
+    margin: 0 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+}
+
+a > span:hover {
+    color: yellow;
+}
+
+.header__icon {
+    width: 80px;
+    cursor: pointer;
+}
+
+.user__avatar {
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .header{
+        font-size: 14px;
+        justify-content:end;
+        margin: 0;
+    }
+
+}
