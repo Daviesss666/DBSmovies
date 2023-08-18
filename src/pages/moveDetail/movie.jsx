@@ -8,18 +8,21 @@ const Movie = () => {
     
     useEffect(() => {
         getData()
-        
-    })
+        window.scrollTo(0,0)
+        // eslint-disable-next-line
+    },[])
 
     const getData = () => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
         .then(res => res.json())
         .then(data => setMovie(data))
+          
     }
+    
 
     return (
         <div className="movie">
-            <div className="movie__intro">
+            <div className="movie__intro"> 
                 <img className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} alt="movie illustration" />
             </div>
             <div className="movie__detail">
@@ -43,7 +46,7 @@ const Movie = () => {
                                 currentMovieDetail && currentMovieDetail.genres
                                 ? 
                                 currentMovieDetail.genres.map(genre => (
-                                    <><span className="movie__genre" id={genre.id}>{genre.name}</span></>
+                                    <><span className="movie__genre" key={genre.id}  id={genre.id}>{genre.name}</span></>
                                 )) 
                                 : 
                                 ""
@@ -57,6 +60,7 @@ const Movie = () => {
                     
                 </div>
             </div>
+            <div>{currentMovieDetail ? currentMovieDetail.cast : ""}</div>
             <div className="movie__links">
                 <div className="movie__heading">Useful Links</div>
                 {
