@@ -61,6 +61,10 @@
     color:#f3ce13
 }
 
+.fab{
+    padding: .5rem;
+}
+
 .movie__genres {
     margin: 1.25rem 0;
 }
@@ -92,15 +96,23 @@
 
 .movie__links {
     position: relative;
-    bottom: 120px;
     display: flex;
-    justify-content: space-between;
-    width: 75%;
+    width: 80%;
+    bottom: 80px;
 }
 
-.movie__heading {
+.movie_castName{
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 130px;
+
+}
+
+.movie__heading{
     font-size: 2.2rem;
 }
+
 
 .movie__Button {
     display: flex;
